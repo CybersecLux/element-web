@@ -24,12 +24,14 @@ export default class VectorAuthHeaderLogo extends React.PureComponent {
     render() {
         const brandingConfig = SdkConfig.get().branding;
         let logoUrl = "themes/element/img/logos/element-logo.svg";
+        let cyberluxLogoUrl = "themes/element/img/logos/logo-cyberlux.png";
         if (brandingConfig && brandingConfig.authHeaderLogoUrl) {
             logoUrl = brandingConfig.authHeaderLogoUrl;
         }
 
         return (
             <div className="mx_AuthHeaderLogo">
+                <img src={cyberluxLogoUrl} alt="Cyberlux" />
                 <img src={logoUrl} alt="Element" />
             </div>
         );
